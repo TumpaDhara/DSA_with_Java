@@ -25,7 +25,7 @@ public class LinearSearch {
         if(result == -1){
             System.out.println("Element is not found.");
         }else{
-            System.out.println("Element is found at index "+ result);
+            System.out.println("Element is found at index :"+ result);
         }
         obj.close();
     }
