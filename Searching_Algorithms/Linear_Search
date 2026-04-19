@@ -1,0 +1,32 @@
+package searching_algorithms;
+import java.util.*;
+public class LinearSearch {
+    public  static int linearSearch(int[] a,int target){
+        int i =0;
+        for(i = 0;i<a.length;i++){
+            if(a[i]==target){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static void main(String[] args[]){
+        Scanner obj = new Scanner(System.in);
+        System.out.print("Enter the size of the array : ");
+        int n = obj.nextInt();
+        int[] arr = new int[n];
+        System.out.println("Enter the value of the array : ");
+        for(int i =0;i<arr.length;i++){
+            arr[i]=obj.nextInt();
+        }
+        System.out.print("please enter a searching element : ");
+        int target = obj.nextInt();
+        int result = linearSearch(arr,target);
+        if(result == -1){
+            System.out.println("Element is not found.");
+        }else{
+            System.out.println("Element is found at index "+ result);
+        }
+        obj.close();
+    }
+}
